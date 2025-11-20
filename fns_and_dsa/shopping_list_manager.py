@@ -24,10 +24,10 @@ def main():
                 print("No item entered. Nothing added.")
 
         elif choice == '2':
-            if not shopping_list:
-                print("Your shopping list is empty.")
-                continue
             item = input("Enter item to remove: ").strip()
+            if item not in shopping_list:
+                print("Item not found in the list.")
+                continue
             if not item:
                 print("No item entered.")
                 continue
