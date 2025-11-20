@@ -46,6 +46,7 @@ alx_be_python/
 - (Optional) Virtual environment
 
 **Setup**
+
 ```bash
 cd alx_be_python/fns_and_dsa
 python -m venv .venv
@@ -53,3 +54,8 @@ python -m venv .venv
 # Linux/macOS:
 source .venv/bin/activate
 python -m pip install --upgrade pip
+---
+
+## 📄 License (MIT)
+
+Copyright © 2025 Mayo Takémsi Norris KADANGA
