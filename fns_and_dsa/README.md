@@ -54,7 +54,8 @@ python -m venv .venv
 # Linux/macOS:
 source .venv/bin/activate
 python -m pip install --upgrade pip
----
+```
+
 
 ## 📄 License (MIT)
 
