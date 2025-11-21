@@ -1,20 +1,30 @@
 """
 Learning Objectives:
-- Mastering the basics of datetime module in Python
-- Understanding how to manipulate dates and times
-- Implementing date arithmetic and formatting
+- Use the datetime module to get/format current date & time
+- Perform date arithmetic with timedelta
 """
-import datetime
+
+from datetime import datetime, date, timedelta
 
 def display_current_datetime():
     """Displays the current date and time."""
-    
-    current_date = datetime.datetime.now()
-    print("Current date and time:", current_date)
+    current_date = datetime.now()
+    print("Current date and time:", current_date.strftime("%Y-%m-%d %H:%M:%S"))
 
-def calculate_future_date(days):
-    """Calculates the date after a given number of days from today."""
-    days = int(input("Enter number of days: "))
-    today = datetime.date.today()
-    future_date = today + datetime.timedelta(days=days)
+def calculate_future_date():
+    """Prompts for days, computes future date, and prints it."""
+    while True:
+        try:
+            days = int(input("Enter the number of days to add to the current date: "))
+            break
+        except ValueError:
+            print("Please enter a valid integer.\n")
+
+    today = date.today()
+    future_date = today + timedelta(days=days)
+    print("Future date:", future_date.strftime("%Y-%m-%d"))
     return (future_date)
+
+if __name__ == "__main__":
+    display_current_datetime()
+    calculate_future_date()
