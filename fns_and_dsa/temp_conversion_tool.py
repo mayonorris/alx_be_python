@@ -9,11 +9,11 @@ Learning Objectives:
 FAHRENHEIT_TO_CELSIUS_FACTOR= 5/9
 CELSIUS_TO_FAHRENHEIT_FACTOR= 9/5
 
-def convert_to_celsius(fahrenheit: float) -> float:
+def convert_to_celsius(fahrenheit) -> float:
     """Convert Fahrenheit to Celsius using the global factor."""
     return (fahrenheit-32.0)*FAHRENHEIT_TO_CELSIUS_FACTOR
 
-def convert_to_fahrenheit(celsius: float) -> float:
+def convert_to_fahrenheit(celsius) -> float:
     """Convert Celsius to Fahrenheit using the global factor."""
     return (celsius*CELSIUS_TO_FAHRENHEIT_FACTOR)+32.0
 
