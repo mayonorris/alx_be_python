@@ -1,12 +1,10 @@
-# temp_conversion_tool.py
-
 """
 Demonstrate variable scope with global conversion factors and two conversion functions.
 """
 
 # Global conversion factors (read-only)
-FAHRENHEIT_TO_CELSIUS_FACTOR = 5.0 / 9.0
-CELSIUS_TO_FAHRENHEIT_FACTOR = 9.0 / 5.0
+FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
+CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
 
 def convert_to_celsius(fahrenheit: float) -> float:
     """Convert Fahrenheit to Celsius using the global factor."""
