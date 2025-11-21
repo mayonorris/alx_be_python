@@ -5,30 +5,24 @@ Learning Objectives:
 - Implement temperature conversion functions
 - Handle user input and validation
 """
-# Global conversion factors
-FAHRENHEIT_TO_CELSIUS_FACTOR= 5/9
-CELSIUS_TO_FAHRENHEIT_FACTOR= 9/5
+FAHRENHEIT_TO_CELSIUS_FACTOR = 5/9
+CELSIUS_TO_FAHRENHEIT_FACTOR = 9/5
 
-def convert_to_celsius(fahrenheit) -> float:
-    """Convert Fahrenheit to Celsius using the global factor."""
-    return (fahrenheit-32.0)*FAHRENHEIT_TO_CELSIUS_FACTOR
+def convert_to_celsius(fahrenheit):
+    return (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
 
-def convert_to_fahrenheit(celsius) -> float:
-    """Convert Celsius to Fahrenheit using the global factor."""
-    return (celsius*CELSIUS_TO_FAHRENHEIT_FACTOR)+32.0
+def convert_to_fahrenheit(celsius):
+    return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
 
 if __name__ == "__main__":
-    # User interaction & validation lives here
     raw_temp = input("Enter the temperature to convert: ").strip()
     unit = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").strip().upper()
-
-    # Validate numeric temperature
+    # numeric validation with required error message
     try:
         temp = float(raw_temp)
     except ValueError:
         raise ValueError("Invalid temperature. Please enter a numeric value.")
-
-    # Route based on unit
+    # Convert based on unit
     match unit:
         case "C":
             result = convert_to_fahrenheit(temp)
