@@ -1,5 +1,13 @@
-FAHRENHEIT_TO_CELSIUS_FACTOR= 5 / 9
-CELSIUS_TO_FAHRENHEIT_FACTOR= 9 / 5
+"""
+Temperature Conversion Tool
+This module provides functions to convert temperatures between Celsius and Fahrenheit.
+Learning Objectives:
+- Implement temperature conversion functions
+- Handle user input and validation
+"""
+# Global conversion factors
+FAHRENHEIT_TO_CELSIUS_FACTOR= 5/9
+CELSIUS_TO_FAHRENHEIT_FACTOR= 9/5
 
 def convert_to_celsius(fahrenheit: float) -> float:
     """Convert Fahrenheit to Celsius using the global factor."""
