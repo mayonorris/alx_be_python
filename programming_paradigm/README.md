@@ -52,9 +52,6 @@ alx_be_python/
 └─ library_management.py
 ```
 
-
-> **Naming/paths matter** — checkers typically regex-match file names and exact output strings.
-
 ---
 
 ## 🧰 Prerequisites & Setup
