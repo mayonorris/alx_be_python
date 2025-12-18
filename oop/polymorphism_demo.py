@@ -1,31 +1,27 @@
-"""Define a base class Shape with a method area() and derived classes Rectangle and Circle, 
-each overriding the area() method to calculate their respective areas.
-"""
+# polymorphism_demo.py
+"""Polymorphism via method overriding: Shape -> Rectangle, Circle."""
+
+import math
 
 class Shape:
     """Base class representing a generic shape."""
     def area(self):
-        """Calculate the area of the shape."""
+        """Compute area. Must be overridden by subclasses."""
         raise NotImplementedError("Subclasses must implement this method")
 
 class Rectangle(Shape):
-    """Derived class representing a rectangle."""
-    def __init__(self, width, height):
+    """Rectangle with length and width."""
+    def __init__(self, length, width):
+        self.length = length
         self.width = width
-        self.height = height
 
     def area(self):
-        """Calculate the area of the rectangle."""
-        return self.width * self.height
+        return self.length * self.width
 
 class Circle(Shape):
-    """Derived class representing a circle."""
+    """Circle with radius."""
     def __init__(self, radius):
         self.radius = radius
 
     def area(self):
-        """Calculate the area of the circle."""
-        import math
         return math.pi * (self.radius ** 2)
-
-        
